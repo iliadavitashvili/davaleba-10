@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+   margin: 0;
+    background-color: blue;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 200px 180px 200px 200px;
+    grid-template-rows: repeat(4, 150px);
+    gap:10px;
+    grid-template-areas: 
+    'masonry-1 responsive overlap overlap'
+    'masonry-1 fluid explicitly-placed negative-space'
+    'flexible-breath masonry-2 explicitly-placed masonry-3'
+    'dom-order masonry-2 named-tracks named-tracks'
+    ;
+    justify-content: center;
+  
+    
+
+}
+
+.item{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightblue;
+    background-color: white;
+}
+
+.masonry-1{
+    grid-area: masonry-1;
+}
+
+.masonry-2{
+    grid-area: masonry-2;
+}
+
+.masonry-3{
+    grid-area: masonry-3;
+}
+
+.fluid{
+    grid-area: fluid;
+}
+
+.negative-space{
+    grid-area: negative-space;
+}
+
+.flexible-breath{
+    grid-area: flexible-breath;
+}
+
+.dom-order{
+    grid-area: dom-order;
+}
+
+.overlap{
+    grid-area: overlap;
+}
+
+.named-tracks{
+    grid-area: named-tracks;
+}
+
+.responsive{
+    grid-area: responsive;
+}
+
+.explicitly-placed{
+    grid-area: explicitly-placed;
+}
